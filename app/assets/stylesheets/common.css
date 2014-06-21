@@ -1,0 +1,40 @@
+.sign_up{
+  margin-left: 120px;
+}
+
+#question{
+	padding-left: 9px;
+}
+
+
+.profile-detail{
+  height: 203px;
+  margin-left: 40px;
+  margin-right: 1px;
+}
+
+.followers-details{
+
+}
+
+.tweets{
+	margin-right: 10px;
+}
+
+.trends{
+	height: auto;
+	height: 200px;
+}
+
+
+body.user-style{
+    background-attachment: fixed;
+    background-color: #c0deed;
+    background-image: url("../assets/bg.png");
+    background-position: left 40px;
+    background-repeat: no-repeat;
+}
+body {
+    font-family: "Gotham Narrow SSm",sans-serif,Arial;
+    text-rendering: optimizelegibility;
+}
