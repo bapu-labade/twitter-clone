@@ -1,0 +1,17 @@
+
+ Who to follow
+<br/>
+<% if @users.present? %>
+	<% @users.each do |user| %>
+		<hr/>
+		<span id="about-img">
+			<img class="profile-photo" align="middle" src="../assets/default_profile_6_bigger.png" alt="Profile Pics">
+			<span style="margin-left: 10px;"> <b> <%= user.username %></b>
+				<%= form_tag connections_path, remote: true do %>
+				   <%= hidden_field_tag :follwed_user_id, user.id %>
+				  <%= submit_tag 'Follow', class: 'btn btn-primary' %> 
+				<% end %>
+			</span>
+		</span>
+	<% end %>
+<% end %>

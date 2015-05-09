@@ -1,0 +1,28 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				Tweets
+			</th>
+			<th>
+				Following
+			</th>
+			<th>
+				Follwers
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>
+			<%=  @current_user.tweets.count %>
+		</td>
+		<td>
+			<%= @current_user.follow_count %>
+		</td>
+		<td>
+			<%= @current_user.followers_count %>
+		</td>
+	</tr>
+	</tbody>
+</table>

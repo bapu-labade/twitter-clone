@@ -1,51 +1,35 @@
-<div class="container-fluid">
-	<div class="row">
+<!-- <div class="container-fluid">
+	<div class="row"> -->
 	  <div class="col-md-3 profile-detail">
-	    
 	    <div class="well">
 			  <span id="about-img">
 			    <img class="profile-photo" align="middle" src="../assets/default_profile_6_bigger.png" alt="Profile Pics">
-			    <span style="margin-left: 10px;"> <b> Bapu Labade </b> (@bapulabade) </span>
+			    <span style="margin-left: 10px;"> <b> <%= @current_user.username %> </b> (<%= @current_user.twitter_name %>) </span>
 			  </span>
-			  <div>
-				  <table class="table">
-		        <thead>
-		        	<tr>
-		        		<th>
-		        			Tweets
-		        		</th>
-		        		<th>
-		        			Following
-		        		</th>
-		        		<th>
-		        			Follwers
-		        		</th>
-		        	</tr>
-		        </thead>
-		        <tbody>
-		        <tr>
-		        	<td>
-		        		1
-		        	</td>
-		        	<td>
-		        		100
-		        	</td>
-		        	<td>
-		        		12
-		        	</td>
-		        </tr>
-		        </tbody>
-		      </table>
+			  <div id="profile">
+				  <%= render 'tweets/profile_detail' %>
 		    </div>
       </div>
-      <div>
-      	 <input type="textarea" class="form-control" id="tweet-content" placeholder="Compose New tweet">
+      <div ng-controller="userProfileCtrl">
+	      <%= form_tag tweets_path, method: :post, remote: true, id: "tweet-submit-form" do -%>
+	        <div>
+	        	<%= text_area_tag 'content', nil, rows: 4, class: "form-control", placeholder: "Compose New Tweet", "ng-model" => "tweetText" %>
+	        </div>
+          <div class="tweet-submit-btn"> 
+            <%= submit_tag 'Tweet', class: 'btn btn-primary' %> 
+            <span>{{tweetText.length + '/' + total_tweet_len}}</span>
+          </div>
+        <% end -%>
       </div><br/>
       <div class="well trends">
-        Trends·
+        Trends
       </div>
 	  </div>
-	  <div class="col-md-5 well tweets">.col-md-4</div>
-	  <div class="col-md-3 well followers-details">cacsc</div>
-	</div>
-</div> <!-- /container -->
+	  <div class="col-md-5 well tweets"> 
+	   <%= render 'tweets/tweet' %>
+	  </div>
+	  <div class="col-md-3 well followers-details user_lists"> 
+		    <%= render "connections/users" %>
+		</div>
+<!-- 	</div>
+</div>  -->

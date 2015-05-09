@@ -1,0 +1,8 @@
+
+
+User 					1----->* 			Tweets
+
+User          1------>*      Followers
+
+User          1------>       Following
+

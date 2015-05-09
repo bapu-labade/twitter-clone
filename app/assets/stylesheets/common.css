@@ -38,3 +38,8 @@ body {
     font-family: "Gotham Narrow SSm",sans-serif,Arial;
     text-rendering: optimizelegibility;
 }
+
+
+.tweet-submit-btn{
+	margin-top: 5px;
+}

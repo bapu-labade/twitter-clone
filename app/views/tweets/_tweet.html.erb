@@ -1,0 +1,13 @@
+<div> <b> Tweets </b></div> <hr/>
+<% unless @tweets.empty? %>    
+  <% @tweets.each do |tweet| %>
+	  <div> 
+	    <img class="profile-photo" align="middle" src="../assets/default_profile_6_bigger.png" alt="Profile Pics">
+	    <span style="margin-left: 10px;"> <b> Bapu Labade </b> (@bapulabade) </span>
+	  </div>
+	  <div>
+      <p> <%= tweet.content %> </p>
+	  </div>
+	  <hr/>
+  <% end %>
+<% end %>
