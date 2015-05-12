@@ -18,7 +18,7 @@
 			<%=  @current_user.tweets.count %>
 		</td>
 		<td>
-			<%= @current_user.follow_count %>
+			<%= link_to @current_user.follow_count, connections_path, remote: true %>
 		</td>
 		<td>
 			<%= @current_user.followers_count %>

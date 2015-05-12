@@ -1,4 +1,14 @@
 class ConnectionsController < ApplicationController
+  layout 'profile_layout'
+  
+  def index
+    @all_following = current_user.all_following
+    respond_to do |format|
+      format.html
+      format.js 
+    end
+  end
+
 	def create
 		follwed_user = User.find(params[:follwed_user_id])
     current_user.follow(follwed_user)

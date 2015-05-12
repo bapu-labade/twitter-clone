@@ -1,6 +1,6 @@
 MyTwitter::Application.routes.draw do
  
-  resources :connections, only: [:create]
+  resources :connections, only: [:create, :index, :show]
 
   get "profile/index"
 
