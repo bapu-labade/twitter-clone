@@ -22,20 +22,37 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Notification</a></li>
-            <li><a href="#">Discover</a></li>
-            <li><a href="#">Me</a></li>
+            <li class="active">
+              <%= link_to root_path do %>
+                <i class="fa fa-home"></i> Home
+              <% end %>
+            </li>
+            <li>
+            <%= link_to "#" do %>
+              <i class="fa fa-bell-o"></i> Notification
+            <% end %>
+            <li>
+              <%= link_to "#" do %>
+                <i class="fa fa-envelope"></i> Messages
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <i class="fa fa-users"></i> Users
+              <% end %>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
               <%=link_to "#", class: "dropdown-toggle", "data-toggle" => "dropdown" do %>
-                <i class="fa fa-cog"> Setting <b class="caret"></b> </i>
+                <i class="fa fa-cog"></i> Setting <b class="caret"></b>
               <% end %>
-<!--               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>Setting <b class="caret"></b></a> -->
               <ul class="dropdown-menu">
                <li>
-                  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+                  <%= link_to destroy_user_session_path, method: :delete do %>
+                    <i class="fa fa-sign-out"> </i> Logout
+                  <% end %>
+                  <!-- <%#= link_to "Logout", destroy_user_session_path, method: :delete %> -->
                </li>
               </ul>
             </li>
