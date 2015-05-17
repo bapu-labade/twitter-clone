@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140913213517) do
+ActiveRecord::Schema.define(:version => 20150517171159) do
 
   create_table "follows", :force => true do |t|
     t.integer  "followable_id",                      :null => false
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20140913213517) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "twitter_name"
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

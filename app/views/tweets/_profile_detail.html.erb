@@ -15,13 +15,13 @@
 	<tbody>
 	<tr>
 		<td>
-			<%=  @current_user.tweets.count %>
+			<%= link_to @current_user.tweets.count, tweets_path, remote: true %>
 		</td>
 		<td>
 			<%= link_to @current_user.follow_count, connections_path, remote: true %>
 		</td>
 		<td>
-			<%= @current_user.followers_count %>
+			<%= link_to @current_user.followers_count, follower_connection_path(@current_user.id), remote: true %>
 		</td>
 	</tr>
 	</tbody>

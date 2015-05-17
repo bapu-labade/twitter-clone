@@ -8,6 +8,12 @@ class TweetsController < ApplicationController
       format.html { redirect_to tasks_url }
       format.js
     end
-
 	end
+
+  def index
+    @tweets = @current_user.tweets
+    respond_to do |format|
+      format.js 
+    end
+  end
 end

@@ -1,12 +1,17 @@
 MyTwitter::Application.routes.draw do
  
-  resources :connections, only: [:create, :index, :show]
+  resources :connections, only: [:create, :index, :show] do 
+    member do 
+      get :follower
+    end
+  end
 
-  get "profile/index"
+  # get "profile/index"
 
   devise_for :users
   
   resources :tweets
+  resources :profiles
 
   get "home/index"
   

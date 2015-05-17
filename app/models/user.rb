@@ -6,7 +6,9 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, 
-                  :twitter_name
+                  :twitter_name, :avatar
+
+  mount_uploader :avatar, AvatarUploader
 
   # Associations
   has_many :tweets

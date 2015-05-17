@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :find_current_user
 
   def after_sign_in_path_for(resource)
-    profile_index_path
+    profiles_path
   end
 
   def find_current_user

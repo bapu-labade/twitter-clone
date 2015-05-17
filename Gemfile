@@ -40,3 +40,5 @@ gem 'devise'
 gem 'pry'
 gem 'acts_as_follower', '~> 0.1.1'
 gem "font-awesome-rails"
+gem "rmagick"
+gem "carrierwave"

@@ -19,4 +19,11 @@ class ConnectionsController < ApplicationController
       format.js
     end
   end
+
+  def follower
+    @all_followers = current_user.followers
+    respond_to do |format|
+      format.js
+    end
+  end
 end

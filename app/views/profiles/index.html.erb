@@ -3,7 +3,8 @@
 	  <div class="col-md-3 profile-detail">
 	    <div class="well">
 			  <span id="about-img">
-			    <img class="profile-photo" align="middle" src="../assets/default_profile_6_bigger.png" alt="Profile Pics">
+          <%=link_to image_tag("../assets/default_profile_6_bigger.png", class: "profile-photo", align: "middle", alt: "Profile Pics"), edit_profile_path(@current_user.id) %>
+			  <!--   <img class="profile-photo" align="middle" src="../assets/default_profile_6_bigger.png" alt="Profile Pics"> -->
 			    <span style="margin-left: 10px;"> <b> <%= @current_user.username %> </b> (<%= @current_user.twitter_name %>) </span>
 			  </span>
 			  <div id="profile">
