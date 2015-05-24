@@ -1,1 +1,12 @@
-profile edit page
+<h2> Upload profile avatar </h2>
+<%= form_for @user, url: profile_path(@user.id), :html => {:multipart => true}, method: :put do |f| %>
+  <%#= f.error_messages %>
+  <p>
+    <%= f.file_field :avatar %>
+  </p>
+  <p>
+    <%= f.label :remote_avatar_url, "or image URL" %><br />
+    <%= f.text_field :remote_avatar_url %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
