@@ -1,12 +1,18 @@
-<h2> Upload profile avatar </h2>
-<%= form_for @user, url: profile_path(@user.id), :html => {:multipart => true}, method: :put do |f| %>
-  <%#= f.error_messages %>
-  <p>
-    <%= f.file_field :avatar %>
-  </p>
-  <p>
-    <%= f.label :remote_avatar_url, "or image URL" %><br />
-    <%= f.text_field :remote_avatar_url %>
-  </p>
-  <p><%= f.submit %></p>
-<% end %>
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-6">
+    
+    <h2> Upload profile avatar </h2>
+    <%= form_for @user, url: profile_path(@user.id), :html => {:multipart => true}, method: :put do |f| %>
+      <%#= f.error_messages %>
+      <div class="form-group">
+        <%= f.file_field :avatar %>
+      </div>
+      <div class="form-group">
+        <%= f.label :remote_avatar_url, "or Image URL" %><br />
+        <%= f.text_field :remote_avatar_url %>
+      </div>
+      <p><%= f.submit nil, class: "btn btn-primary" %></p>
+    <% end %>
+  </div>
+  </div>
