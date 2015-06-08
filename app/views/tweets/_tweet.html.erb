@@ -1,7 +1,6 @@
 <div> <b> Tweets </b></div> <hr/>
 <% unless @tweets.empty? %>    
   <% @tweets.each do |tweet| %>
-    <%= binding.pry %>
 	  <div> 
       <% avatar_url = tweet.user.avatar? ? tweet.user.avatar_url(:thumb) : "../assets/default_profile_6_bigger.png" %>
       <%=link_to image_tag(avatar_url, class: "profile-photo", align: "middle", alt: "Profile Pics"), edit_profile_path(tweet.user.id) %>
