@@ -50,12 +50,12 @@ MyTwitter::Application.routes.draw do
   #   end
 
   # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
+    resources :products do
+       resources :comments
+       resources :sales do
+         get 'recent', :on => :collection
+       end
+     end
 
   # Sample resource route within a namespace:
   #   namespace :admin do
